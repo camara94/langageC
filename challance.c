@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include <string.h>
 
-void triangle(int count, char* figure);
 void afficheFigure1(int count);
 char* afficheCarre(int cote);
 char* afficherCercle(int rayon);
+char* triangle(int count);
 
 int main(void)
 {
@@ -15,6 +15,7 @@ int main(void)
 	char carre2[10000] = {};
 	char cercle2[10000] = {};
 	char cercle3[10000] = {};
+	char t[10000] = {};
 	char c[10000] = {};
 	int i=0;
 
@@ -25,13 +26,15 @@ int main(void)
 	strcpy(cercle1, afficherCercle(4));
 	strcpy(cercle3, afficherCercle(5));
 
-	char *figures[10]={carre1, cercle1, carre2, cercle2, cercle3, c};
+	strcpy(t, triangle(10));
+	char *figures[10]={carre1, cercle1, carre2, cercle2, cercle3, c, t};
 
-	for(i=0; i < 6; i++) {
+	for(i=0; i < 7; i++) {
         printf("%s\n", figures[i]);
 	}
 	return 0;
 }
+
 
 char* afficherCercle(int rayon)
 {
@@ -90,6 +93,9 @@ char* afficheCarre(int count) {
 
 	return figure;
 }
+
+
+
 
 char* triangle(int count) {
 
