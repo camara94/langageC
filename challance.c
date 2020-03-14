@@ -59,3 +59,35 @@ char* afficherCercle(int rayon)
     return figure;
 
 }
+
+
+char* afficheCarre(int count) {
+	int i = 0;
+	int j = 0;
+	int k = 0;
+	char figure[1000] = {};
+
+    for (i=0; i < count; i++)
+    {
+        char blanc[1000]={};
+        char etoile[1000]={};
+        for (k=0 ;k < count; ++k)
+        {
+            if(i==0 || i==(count-1) || k==0)
+             strcat(etoile, "-");
+             else if(k==(count-1)) {
+                    int o=0;
+                for(o=0; o < count-2; o++) {
+                    strcat(etoile, " ");
+                }
+                strcat(etoile, "-");
+             }
+        }
+
+        strcat(figure,etoile);
+        strcat(figure,"\n");
+	}
+
+	return figure;
+}
+
