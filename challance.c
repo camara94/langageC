@@ -91,3 +91,37 @@ char* afficheCarre(int count) {
 	return figure;
 }
 
+char* triangle(int count) {
+
+        char figure[1000] = {};
+        int i = 0;
+        int j = 0;
+        int k = 0;
+
+
+
+        for (i=0; i < count; i++)
+        {
+            char blanc[100]={};
+            char etoile[100]={};
+            char retour[3]="\n";
+
+            for (j=0;j < (count-i); ++j)
+            {
+                strcat(blanc, " ");
+            }
+
+            for (k=0 ;k < (2*i+1); ++k)
+            {
+                strcat(etoile, "*");
+            }
+
+            //printf("%s%s",blanc,etoile);
+            //printf("\n");
+            strcat(figure, blanc);
+            strcat(figure, etoile);
+            strcat(figure, retour);
+        }
+    return figure;
+}
+
